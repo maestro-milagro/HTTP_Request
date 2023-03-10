@@ -6,13 +6,14 @@ public class Facts {
     protected String type;
     protected String text;
     protected int upvotes;
+
     public Facts(
             @JsonProperty("user") String user,
             @JsonProperty("id") String id,
             @JsonProperty("type") String type,
             @JsonProperty("text") String text,
             @JsonProperty("upvotes") int upvotes
-    ){
+    ) {
         this.user = user;
         this.id = id;
         this.type = type;
@@ -24,11 +25,12 @@ public class Facts {
     public int getUpvotes() {
         return upvotes;
     }
+
     @Override
-    public String toString(){
-        return "id = "+id+
-        "\n user = "+user+
-        "\n type = "+type+
-        "\n text = "+text;
+    public String toString() {
+        return "id = " + id +
+                "\n user = " + user +
+                "\n type = " + type +
+                "\n text = " + text;
     }
 }
