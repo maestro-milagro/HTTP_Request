@@ -40,12 +40,12 @@ public class Main {
         //Вывод полученных заголовков
         Arrays.stream(response.getAllHeaders()).forEach(System.out::println);
 
-        NASA_materials nasa_materials = mapper.readValue(
+        NasaMaterials nasaMaterials = mapper.readValue(
                 response.getEntity().getContent(),
                 new TypeReference<>() {
                 }
         );
-        String url = nasa_materials.getUrl();
+        String url = nasaMaterials.getUrl();
         File file = new File(".", "space.txt");
         try (FileWriter fileWriter = new FileWriter(file)) {
             file.createNewFile();
